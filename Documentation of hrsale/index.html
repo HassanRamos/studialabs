@@ -1,0 +1,1727 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>User Guide - HRSALE v1.1.10</title>
+<meta name="description" content="HRSALE - The Ultimate HRM">
+<meta name="author" content="hrsale.com">
+<meta name="copyright" content="HRSALE">
+<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+<link rel="stylesheet" href="assets/css/enlarge.css" media="all">
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery.scrollTo.js"></script>
+ <script src="assets/js/jquery.easing.js"></script>
+<script>document.createElement('section');
+            var duration = '500', easing = 'swing';</script>
+<script src="assets/js/script.js"></script>
+<style>
+html {
+	background-color: #fcfcfc;
+	color: #404040;
+}
+            ::-moz-selection {
+background:#333636;
+color:#00DFFC;
+}
+::selection {
+	background: #333636;
+	color: #00DFFC;
+}
+#documenter_sidebar #documenter_logo {
+	background-image: url(logo.html);
+}
+a {
+	color: #111;
+}
+.btn {
+	border-radius: 3px;
+}
+.btn-primary {
+	background-image: -moz-linear-gradient(top, #008C9E, #006673);
+	background-image: -ms-linear-gradient(top, #008C9E, #006673);
+ background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+	background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+	background-image: -o-linear-gradient(top, #008C9E, #006673);
+	background-image: linear-gradient(top, #008C9E, #006673);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+	border-color: #006673 #006673 #bfbfbf;
+	color: #FFFFFF;
+}
+.btn-primary:hover,  .btn-primary:active,  .btn-primary.active,  .btn-primary.disabled,  .btn-primary[disabled] {
+	border-color: #008C9E #008C9E #bfbfbf;
+	background-color: #006673;
+}
+hr {
+	border-top: 1px solid #D4D4D4;
+	border-bottom: 1px solid #FFFFFF;
+}
+#documenter_sidebar, #documenter_sidebar ul a {
+	background-color: #ffffff;
+	color: #111;
+}
+#documenter_sidebar ul {
+	border-top: 1px solid #212424;
+}
+#documenter_sidebar ul a {
+	border-bottom: 1px solid #212424;
+	color: #111111;
+}
+#documenter_sidebar ul a:hover {
+	background: #22313F;
+	color: #00DFFC;
+	border-top: 1px solid #333636;
+}
+#documenter_sidebar ul a.current {
+	background: #22313F;
+	color: #00DFFC;
+	border-top: 1px solid #333636;
+}
+#documenter_copyright {
+	display: block !important;
+	visibility: visible !important;
+}
+.preview {
+	max-height: 600px;
+	-webkit-box-shadow: 0 0px 15px 0 rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0px 15px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 0px 15px 0 rgba(0,0,0,0.1);
+	clear: both;
+	margin: 20px 20px;
+}
+</style>
+</head>
+<body class="documenter-project-the-invoicer">
+<div id="documenter_sidebar"> <br/>
+  <center>
+    <a href="index.html"> <img src="assets/img/hrlogo.png" ><br/>
+    </a>
+  </center>
+  
+  <!-- Navigation Start-->
+  <ul id="documenter_nav">
+    <li><a class="current" href="#start">Start</a></li>
+    <li><a href="#install" title="Installation">Installation</a></li>
+    <li><a href="#login" title="Initial Login Details">Initial Login Details</a></li>
+    <li><a href="#admin_dashboard" title="Admin Dashboard">Admin Dashboard</a></li>
+    <li><a href="#staff_hr" title="Staff">
+      <h3>Staff</h3>
+      </a></li>
+    <li><a href="#employee" title="Employees">Employees</a></li>
+    <li><a href="#roles" title="Roles & Privileges">Roles & Privileges</a></li>
+    <li><a href="#directory" title="Staff Directory">Staff Directory</a></li>
+    <li><a href="#import_employees" title="Import Employees">Import Employees</a></li>
+    <li><a href="#core_hr" title="Core HR">
+      <h3>Core HR</h3>
+      </a></li>
+    <li><a href="#awards" title="Awards">Awards</a></li>
+    <li><a href="#transfers" title="Transfers">Transfers</a></li>
+    <li><a href="#resignations" title="Resignations">Resignations</a></li>
+    <li><a href="#travels" title="Travels">Travels</a></li>
+    <li><a href="#promotions" title="Promotions">Promotions</a></li>
+    <li><a href="#complaints" title="Complaints">Complaints</a></li>
+    <li><a href="#warnings" title="Warnings">Warnings</a></li>
+    <li><a href="#terminations" title="Terminations">Terminations</a></li>
+    <li><a href="#employee_last_login" title="Employees Last Login">Employees Last Login</a></li>
+    <li><a href="#employee_exit" title="Employee Exit">Employee Exit</a></li>
+    <li><a href="#org_hr" title="Organization">
+      <h3>Organization</h3>
+      </a></li>
+    <li><a href="#announcements" title="Announcements">Announcements</a></li>
+    <li><a href="#policies" title="Company Policy">Company Policy</a></li>
+    <li><a href="#org_chart" title="Organization Chart">Organization Chart</a></li>
+    <li><a href="#departments" title="Departments">Departments</a></li>
+    <li><a href="#designations" title="Designations">Designations</a></li>
+    <li><a href="#company" title="Company">Company</a></li>
+    <li><a href="#location" title="Location">Location</a></li>
+    <li><a href="#office_shift" title="Office Shift">Office Shift</a></li>
+    <li><a href="#holidays" title="Holidays">Holidays</a></li>
+    <li><a href="#expenses" title="Expenses">Expenses</a></li>
+    <li><a href="#hr_calendar" title="HR Calendar">
+      <h3>HR Calendar</h3>
+      </a></li>
+    <li><a href="#asset_hr" title="Assets">
+      <h3>Assets</h3>
+      </a></li>
+    <li><a href="#assets" title="Assets">Assets</a></li>
+    <li><a href="#assets_category" title="Assets Category">Assets Category</a></li>
+    <li><a href="#goal_hr" title="Goal Tracking">
+      <h3>Goal Tracking</h3>
+      </a></li>
+    <li><a href="#goal" title="Goal Tracking">Goal Tracking</a></li>
+    <li><a href="#goal_type" title="Goal Type">Goal Type</a></li>
+    <li><a href="#em_hr" title="Events & Meetings">
+      <h3>Events & Meetings</h3>
+      </a></li>
+    <li><a href="#events" title="Events">Events</a></li>
+    <li><a href="#meetings" title="Meetings">Meetings</a></li>
+    <li><a href="#ta_hr" title="Time and Attendance">
+      <h3>Timesheet</h3>
+      </a></li>
+    <li><a href="#attendance" title="Attendance">Attendance</a></li>
+    <li><a href="#monthly_timesheet" title="Monthly Timesheet">Monthly Timesheet</a></li>
+    <li><a href="#timesheet_calendar" title="Timesheet Calendar">Timesheet Calendar</a></li>
+    <li><a href="#date_wise_attendance" title="Date Wise Attendance">Date Wise Attendance</a></li>
+    <li><a href="#update_uttendance" title="Update Attendance">Update Attendance</a></li>
+    <li><a href="#import_uttendance" title="Import Attendance">Import Attendance</a></li>
+    <li><a href="#section_payroll" title="Payroll">
+      <h3>Payroll</h3>
+      </a></li>
+    <li><a href="#recruitment" title="Recruitment">
+      <h3>Recruitment</h3>
+      </a></li>
+    <li><a href="#theme_settings" title="Recruitment">
+      <h3>Theme Settings</h3>
+      </a></li>
+    <li><a href="#training_hr" title="Training">
+      <h3>Training</h3>
+      </a></li>
+    <li><a href="#training" title="Training List">Training List</a></li>
+    <li><a href="#training_type" title="Training Type">Training Type</a></li>
+    <li><a href="#trainers" title="Trainers">Trainers</a></li>
+    <li><a href="#files_manager" title="Files Manager">
+      <h3>Files Manager</h3>
+      </a></li>
+    <li><a href="#inquires" title="Inquires"><h3>Inquires</h3></a></li>
+    <li><a href="#performance_hr" title="Performance">
+      <h3>Performance</h3>
+      </a></li>
+    <li><a href="#performance_indicator" title="Performance Indicator">Performance Indicator</a></li>
+    <li><a href="#performance_appraisal" title="Give Performance Appraisal">Give Performance Appraisal</a></li>
+    <li><a href="#project_hr" title="Projects">
+      <h3>Projects</h3>
+      </a></li>
+    <li><a href="#projects" title="Projects">Projects</a></li>
+    <li><a href="#worksheet_tasks" title="Tasks">Tasks</a></li>
+    <li><a href="#leave" title="Leave">
+      <h3>Leave</h3>
+      </a></li>
+    <li><a href="#system_hr" title="System">
+      <h3>System</h3>
+      </a></li>
+    <li><a href="#multi_language" title="Multi Language">Multi Language</a></li>
+    <li><a href="#setup_modules" title="Setup Modules">Setup Modules</a></li>
+    <li><a href="#settings" title="Settings">Settings</a></li>
+    <li><a href="#constants" title="Constants">Constants</a></li>
+    <li><a href="#email_template" title="Email Template">Email Template</a></li>
+    <li><a href="#database_backup" title="Database Backup Log">Database Backup Log</a></li>
+    <li><a href="#reports_hr" title="HR Reports">
+      <h3>HR Reports</h3>
+      </a></li>
+    <li><a href="#report_payslip" title="Payslip Report">Payslip Report</a></li>
+    <li><a href="#report_attendance" title="Attendance Report">Attendance Report</a></li>
+    <li><a href="#report_training" title="Training Report">Training Report</a></li>
+    <li><a href="#report_projects" title="Projects Report">Projects Report</a></li>
+    <li><a href="#report_tasks" title="Tasks Report">Tasks Report</a></li>
+    <li>
+      <p>&nbsp;</p>
+    </li>
+    <li><a href="#customer_support" title="Customer_Support">Customer Support</a></li>
+    <li><a href="#product_customization" title="Product Customization">Product Customization</a></li>
+  </ul>
+  <!-- Navigation End-->
+  <div id="documenter_copyright">
+    <center>
+      <a href="http://www.hrsale.com/" target="_blank" >&COPY; HRSALE </a><br />
+    </center>
+  </div>
+</div>
+
+<!-- Main Section Start-->
+<div id="documenter_content"> 
+  
+  <!-- Start Section Start-->
+  <section id="start" style="padding-top:80px;">
+    <h1>HRSALE</h1>
+    <h3 style="font-size: 15px; margin:0;">The Ultimate HRM - Version 1.1.10</h3>
+    <hr>
+    <p style="text-align: justify;; width: 900px;"> Thank you for purchasing the HR SALE script. If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form or contact us directly using below email address. Thank you so much!<br />
+      <br />
+      If you face any kind of problem during installation phase of HRSALE - <strong>Do Not Worry - We are here to help you!! Contact us directly at below information</strong><br/>
+    </p>
+    <table>
+      <tr>
+        <td>E-mail Address :</td>
+        <td><a href="mailto:hrsalesoft@gmail.com">hrsalesoft@gmail.com</a></td>
+      </tr>
+    </table>
+  </section>
+  <!-- Start Section End --> 
+  
+  <!-- Installation Section start -->
+  <section id="install">
+    <div class="page-header">
+      <h3>Installation</h3>
+      <hr class="notop">
+    </div>
+    <h2>Follow these steps to install HRSALE.</h2>
+    <ul>
+      <li>Unzip the downloaded folder</li>
+      <li>Copy the files from inside the zip folder : "hrsale_1_1_10" into your server</li>
+      <br />
+      <li>Then go to Your Server for example, www.example.com/install/</li>
+      <li>Enter hostname, database username, database password and database name.</li>
+      <br />
+      <li>Press the "Install" button and All Done!</li>
+    </ul>
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Installation 1st Step</strong></p>
+        <img src="assets/screenshots/1_installation.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>After Successful Installation</strong></p>
+        <img src="assets/screenshots/2_after_installation.png" /> </li>
+    </ul>
+  </section>
+  <!-- Installation Section End --> 
+  
+  <!-- Initial Login Details Start -->
+  
+  <section id="login">
+    <div class="page-header">
+      <h3>Login Details:</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;">To log-in to your desired user panel - please use the following login credentials provided below.</p>
+    <p style="text-align: justify;; width: 900px;"><strong style="color: red">Please Note:</strong> Once you installed the system and you are on login page, and the login page not showing correctly OR not logging to system then you need to set the base url in config.php file which is under application/config/config.php, find the "$config['base_url']" in config.php file. If login page is showing correctly then don't update the base url. You may also contact us at hrsalesoft@gmail.com, we will reply you as soon as possible.<br />
+    You can set the new login page, new dashboard and new template from theme settings page.
+      <br />
+      <strong>The login credentials provided below are for initial usage only - do not forget to update your password after first successful login.</strong> </p>
+    <p>After login to admin panel, you can create accounts for employees</p>
+    <table class="login_table">
+      <tr style="    border-bottom: 1px solid #8dba60;">
+        <th style="text-align: center; border-right: 1px solid #8dba60;">Admin Panel</th>
+      </tr>
+      <tr>
+        <td style="border-right: 1px solid #8dba60;"><p><strong>Username : </strong> fionagrace</p>
+          <p><strong>Password : </strong> fgrace$$##</p></td>
+      </tr>
+    </table>
+    <div> <br>
+      <p><strong>Login Panel</strong></p>
+      <img src="assets/screenshots/3_login_panel.png" /><br>
+    </div>
+  </section>
+  <!-- Initial Login Details End --> 
+  <!-- Admin Dashboard Section Start -->
+  <section id="admin_dashboard">
+    <div class="page-header">
+      <h3>Admin Dashboard</h3>
+      <hr class="notop">
+    </div>
+    <ul>
+      <li>Easy user interface and interactive design to facilitate admins</li>
+      <li>View total people, total company, leave & document management, HR settings, Total Project, tasks and theme settings.</li>
+      <li>View calendar, it has all included module, where you can add and view in the calendar </li>
+      <li>View employee departments in pie chart</li>
+      <li>View employee designation in pie chart</li>
+      <li>View total salaries and total salaries paid.</li>
+      <li>View employee status in pie chart, who is working and who is absent.</li>
+      <li>View total employee, male and female percentage</li>
+      <li>View quick links, in quick links we can add add your staff, tasks, projects and assets.</li>
+      <li>View last 4 payment history of employees.</li>
+      <li>View last 4 new employees.</li>
+    </ul>
+    <br />
+    <strong>NOTE: First you need to add companies, after companies add departments, then add designations, and after designations add employees then everything will work smoothly:)<br>
+    <br>
+    Because employees depends on designations, designations depends on departments, departments depends on companies.</strong> <br />
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Administrator Dashabord</strong></p>
+        <img src="assets/screenshots/4_admin_dashboard.png" /> </li>
+    </ul>
+  </section>
+  <section id="staff_hr">
+    <div class="page-header">
+      <h2><strong>Staff</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <!-- Admin Dashboard  Section Start --> 
+  <!-- Employee Section Start -->
+  <section id="employee">
+    <div class="page-header">
+      <h3>Employees</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Adding a new employee in the system is very easy. You can at a go - add all related information of an employee. The facilities that employee management holds in HRSALE are listed below:<br>
+      <br>
+      To view Employees go to Staff > Employees </p>
+    <ul>
+      <li><strong>Add New Employee</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily add new employee in the system. The form is elaborate with all possible information you might need to add for a new employee.
+        During addition of new employee you just have to provide the Employee ID - the employee id you provided will be the employees user name for his / her employee panel access. 
+        The default password for all employee will be "employee" - once any employee log in successfully to his / her employee panel - they should update their password from their panel. </li>
+      <li><strong>Employee List</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can see list of all employees at a glance. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Employee and Employee List</strong></p>
+        <img src="assets/screenshots/15_employees_employees.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Employee Details</strong></p>
+        <img src="assets/screenshots/16_employees_details.png" /> </li>
+    </ul>
+  </section>
+  <!-- Employee Section End --> 
+  
+  <!-- Roles Section Start -->
+  <section id="roles">
+    <div class="page-header">
+      <h3>Roles & Priviliges</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Roles Level is a very powerful module which should be used carefully. If you want to give permission to any employee - you have to create a new employee - and then set access rules by simply select any role from options you want to give an employee permission.<br>
+      There are many modules in the role, you can easily set new roles with any module, and can assign any role to any employee in the company.<br>
+      <br>
+      To view roles go to Staff > Roles & Priviliges </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Set Role and Role List</strong></p>
+        <img src="assets/screenshots/17_employee_set_roles.png" /> </li>
+    </ul>
+  </section>
+  <!-- Roles Section End -->
+  
+  <section id="directory">
+    <div class="page-header">
+      <h3>Staff Directory</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In staff directory you can view all employees cards, you can show different types of cards from theme settings page. </p>
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Staff Directory</strong></p>
+        <img src="assets/screenshots/61_employees_directory.png" /> </li>
+    </ul>
+  </section>
+  <section id="import_employees">
+    <div class="page-header">
+      <h3>Import Employees</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> The first line in downloaded csv file should remain as it is. Please do not change the order of columns in csv file. </p>
+    <p style="text-align: justify;; width: 900px;"> The correct column order is (First Name, Last Name, Username, Email, Password, Employee ID, Date of Joining, Gender, Date of Birth, Contact Number, Address) and you must follow the csv file, otherwise you will get an error while importing the csv file. </p>
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Import Employees</strong></p>
+        <img src="assets/screenshots/8_import_employees.png" /> </li>
+    </ul>
+  </section>
+  <section id="core_hr">
+    <div class="page-header">
+      <h2><strong>Core HR</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <!-- Award Section Start -->
+  <section id="awards">
+    <div class="page-header">
+      <h3>Awards</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can give your employees different awards in different times as you organization see fit. Giving an employee award is very easy. The features provided in award management 
+      are described below: <br />
+      <br>
+      To view awards go to Core HR > Awards </p>
+    <ul>
+      <li><strong>Add Award</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily give award to any employee if you need. For every month you can give award. The employee that receive award - if he / she receives any money amount - that amount will be added to his / her payroll and will be paid accordingly. </li>
+      <li><strong>Award List</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Award list shows the listing of all awards that you have given to employees in your organization. </li>
+    </ul>
+    <br>
+    <br>
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Award and Award List</strong></p>
+        <img src="assets/screenshots/18_employee_award.png" /> </li>
+    </ul>
+  </section>
+  <!-- Award Section End --> 
+  
+  <!-- Transfer Section Start -->
+  <section id="transfers">
+    <div class="page-header">
+      <h3>Transfers</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can easily transfer any employee to any department and any location.<br>
+      For Transfer you can select employee from the option, then add the transfer date, then select the department and location from the drop down menus.<br>
+      <br>
+      To view Transfers go to Core HR > Transfers </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Transfer and Transfer List</strong></p>
+        <img src="assets/screenshots/19_employee_transfer.png" /> </li>
+    </ul>
+  </section>
+  <!-- Transfer Section End --> 
+  
+  <!-- Resignation Section Start -->
+  <section id="resignations">
+    <div class="page-header">
+      <h3>Resignations</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Any employee of the company can easily sent a request of resignation, or administrator can add resignation for the employee.<br>
+      When an employee send request for resignation then administrator will receive an email that one of your employee sent a request of resignation. <br>
+      <br>
+      To view Resignations go to Core HR > Resignations </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Resignation and Resignation List</strong></p>
+        <img src="assets/screenshots/20_employee_resignation.png" /> </li>
+    </ul>
+  </section>
+  <!-- Resignation Section End --> 
+  <!-- Travels Section Start -->
+  <section id="travels">
+    <div class="page-header">
+      <h3>Travels</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Adding a new travel in the system is very easy. You can at a go - add all related information of a travel. The facilities that travel management holds in HRSALE are listed below:<br>
+      <br>
+      To view Travels go to Core HR > Travels </p>
+    <ul>
+      <li><strong>Add New Travel</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily add new Travel in the system. The form is elaborate with all possible information you might need to add for a new Travel. </li>
+      <li><strong>Travel List</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can see list of all travels at a glance. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Travel and Travel List</strong></p>
+        <img src="assets/screenshots/21_employe_travel.png" /> </li>
+    </ul>
+  </section>
+  <!-- Travels Section End --> 
+  
+  <!-- Promotion Section Start -->
+  <section id="promotions">
+    <div class="page-header">
+      <h3>Promotions</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can easily promote any employee in the system.<br>
+      For Promotion you can select employee from the option, then add the transfer date, and the title for promotion.<br>
+      <br>
+      To view Promotions go to Core HR > Promotions </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Promotion and Promotion List</strong></p>
+        <img src="assets/screenshots/24_employee_promotion.png" /> </li>
+    </ul>
+  </section>
+  <!-- Promotion Section End --> 
+  
+  <!-- Complaints Section Start -->
+  <section id="complaints">
+    <div class="page-header">
+      <h3>Complaints</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can add complaint for any employee and can add complaint against any employee in the system.<br>
+      For Complaint you can select employee from the option, then add the complaint date, and the title for complaint.<br>
+      <br>
+      To view Complaints go to Core HR > Complaints </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Complaint and Complaint List</strong></p>
+        <img src="assets/screenshots/25_employee_complaint.png" /> </li>
+    </ul>
+  </section>
+  <!-- Complaints Section End --> 
+  
+  <!-- Warnings Section Start -->
+  <section id="warnings">
+    <div class="page-header">
+      <h3>Warnings</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can send warnings to any employee in the company.<br>
+      For warning you can select employee from the option, then add warning type, warning subject, warning date.<br>
+      <br>
+      To view Warnings go to Core HR > Warnings </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Warning and Warning List</strong></p>
+        <img src="assets/screenshots/26_employee_warning.png" /> </li>
+    </ul>
+  </section>
+  <!-- Warnings Section End --> 
+  
+  <!-- Termination Section Start -->
+  <section id="terminations">
+    <div class="page-header">
+      <h3>Terminations</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can send termination notice to any employee in the company.<br>
+      For termination you can select employee from the option, then notice date, termination date, termination type and termination description.<br>
+      <br>
+      To view Terminations go to Core HR > Terminations </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Termination and Termination List</strong></p>
+        <img src="assets/screenshots/27_employee_termination.png" /> </li>
+    </ul>
+  </section>
+  <!-- Termination Section End --> 
+  
+  <!-- Employees Last Login Section Start -->
+  <section id="employee_last_login">
+    <div class="page-header">
+      <h3>Employees Last Login</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can view employees last login in the Employees Last Login page. <br>
+      <br>
+      To view Employees Last Login go to Core HR > Employees Last Login </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View Employees Last Login</strong></p>
+        <img src="assets/screenshots/32_employee_employee_last_login.png" /> </li>
+    </ul>
+  </section>
+  <!-- Employees Last Login Section End --> 
+  
+  <!-- Employee Exit Section Start -->
+  <section id="employee_exit">
+    <div class="page-header">
+      <h3>Employee Exit</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can add employee exit information in this section. When a contract is ended or project is ended of an employee then you can add the information in Employee Exit section. <br>
+      <br>
+      To view Employee Exit go to Core HR > Employee Exit </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Employee Exit and Employee Exit List</strong></p>
+        <img src="assets/screenshots/33_employee_employee_exit.png" /> </li>
+    </ul>
+  </section>
+  <!-- Employee Exit Section End -->
+  <section id="org_hr">
+    <div class="page-header">
+      <h2><strong>Organization</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <section id="announcements">
+    <div class="page-header">
+      <h3>Announcements</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In an Office - Announcement plays an important role to let everyone know about any update / event or changes that is required or decided. To faciliate this <strong>HRSALE</strong> provides a very well organized Announcement Management. You can publish the Announcement for any designation, means only selected designation's employees will view the Announcement. The features provided in Announcement Management is listed below: </p>
+    <ul>
+      <li><strong>Create Announcement</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Create a new notice from the Organization > Announcements Link. Give Title for every announcement to highlight it easily. You can easily publish / un-publish announcements and everyone using <strong>HRSALE</strong> will be notified instantly. </li>
+      <li><strong>Publish / Un-Publish</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can set Published OR Un-Published for every announcement. If a announcement is published - it will instantly be shown in admin and employee panel and only selected designation's employees will get notified about the announcement. But if you choose the announcement to be un-published - then it will not be published - but still the announcement will be saved and be shown in the list (announcement list). You can easily publish it later if required. </li>
+      <li><strong>Summary</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Summary will be the primary text / description that everyone will get when any announcement is published. Choosing a good relevant summary is important and this will give the real message in quick short format. </li>
+      <li><strong>Long Description</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Long description is for elaborate description of any notice if needed. Beautiful text editor is provided - so that you can use text formating. Long description is shown when you click to see announcement details. </li>
+      <li><strong>Notifications</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Whenever a announcement is published - the announcement is being notified throughout the system for both admin and employee panels. Both admin and employee dashboard contains a Recent Announcement panel - in which the announcement published at the latest is shown at the top. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Create Announcement and Announcement List</strong></p>
+        <img src="assets/screenshots/11_org_announcement.png" /> </li>
+    </ul>
+  </section>
+  <section id="policies">
+    <div class="page-header">
+      <h3>Company Policy</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Policies is also an important feature every company needs. HRSALE provides policies facilitate for employees for selected companies/company. Admin can add many policies for any company. <br>
+      <br>
+      To view policies go to Organization > Policies </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Policy and Policy List</strong></p>
+        <img src="assets/screenshots/12_org_policy.png" /> </li>
+    </ul>
+  </section>
+  <section id="org_chart">
+    <div class="page-header">
+      <h3>Organization Chart</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> An organizational chart is a diagram that shows the structure of an organization and the relationships and relative ranks of its parts and positions/jobs.</p>
+    <p> You can export the organization chart, and can change the export file name, if you want to change the name of export file then go to theme settings and then click on organization chart tab. <br>
+      <br>
+      To view organization chart go to Organization > Organization Chart </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View Organization Chart</strong></p>
+        <img src="assets/screenshots/12_org_chart.png" /> </li>
+    </ul>
+  </section>
+  <section id="departments">
+    <div class="page-header">
+      <h3>Departments</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> HRSALE also provides easy departments module system, where administrator can add multiple departments, and under one department administrator can add multiple designations. Administrator can edit / update any department information anytime.<br>
+      <br>
+      To view departments go to Organization > Departments </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Department and Department List</strong></p>
+        <img src="assets/screenshots/8_org_departments.png" /> </li>
+    </ul>
+  </section>
+  <section id="designations">
+    <div class="page-header">
+      <h3>Designations</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Designations is also a very good module system, where administrator can add multiple designations, and under one designation administrator can add multiple employees. Administrator can edit / update any designation information anytime.<br>
+      <br>
+      To view departments go to Organization > Designations </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Designation and Designation List</strong></p>
+        <img src="assets/screenshots/9_org_designation.png" /> </li>
+    </ul>
+  </section>
+  <section id="company">
+    <div class="page-header">
+      <h3>Company</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> HRSALE provides a very good and easy company module system, where administrator can add multiple companies, and under one company administrator can add multiple departments, designations and multiple locations. Administrator can edit / update any company information anytime.<br>
+      <br>
+      To view companies go to Organization > Company </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Company and Company List</strong></p>
+        <img src="assets/screenshots/6_org_company.png" /> </li>
+    </ul>
+  </section>
+  <section id="location">
+    <div class="page-header">
+      <h3>Location</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> HRSALE also provides easy location module system, where administrator can add multiple locations, and under one location administrator can add multiple departments and designations. Administrator can edit / update any location information anytime.<br>
+      <br>
+      To view locations go to Organization > Location </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Location and Location List</strong></p>
+        <img src="assets/screenshots/7_org_location.png" /> </li>
+    </ul>
+  </section>
+  
+  <!-- Office Shift Section Start -->
+  <section id="office_shift">
+    <div class="page-header">
+      <h3>Office Shifts</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Office shift is a good feature in Human Resource Management System, in office shifts you can create many shift, like first shift, second shift, third shift etc etc, and also you can set timing for each shift, and can assign the shift to employees - this is easily possible in HRSALE. <br>
+      <br>
+      To view Office Shifts go to Organization > Office Shifts </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Office Shift and Office Shift List</strong></p>
+        <img src="assets/screenshots/42_timesheet_officeshift.png" /> </li>
+    </ul>
+  </section>
+  <!-- Office Shift Section End --> 
+  
+  <!-- Holidays Section Start -->
+  <section id="holidays">
+    <div class="page-header">
+      <h3>Holidays</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Holidays is also key for a Human Resource Management system, admin can add holidays in holidays section, to add holiday first you need to enter Event name, then start date, then end date and then holiday description.<br>
+      When admin add a holiday then employees receive a mail notification about holiday. <br>
+      <br>
+      To view Holidays go to Organization > Holidays </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Holiday and Holiday List</strong></p>
+        <img src="assets/screenshots/43_timesheet_holidays.png" /> </li>
+    </ul>
+  </section>
+  <!-- Holidays Section End -->
+  <section id="expenses">
+    <div class="page-header">
+      <h3>Expenses</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Expenses is a vital part that every human resource admin needs to track. In HRSALE a dynamic and beautiful expense management system is produced. The following features are provided in the expense management: </p>
+    <ul>
+      <li><strong>Add Expense</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily add/edit expenses from Expense Management. During new expense addition - you can define the employee who made this expense, also you can input the amount spent and the bill copy provided by the employee. You can define date of the expense. </li>
+      <li><strong>Expense Details</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Expense details is beautifully shown in modal - for easy and interactive usage for you. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Expense and Expense List</strong></p>
+        <img src="assets/screenshots/13_org_expense.png" /> </li>
+    </ul>
+  </section>
+  <section id="hr_calendar">
+    <div class="page-header">
+      <h3>HR Calendar</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> A staff holiday calendar keeps you and your team organised. Manage leave, track goals, projects, tasks, training, meeting and plan events – the calendar connects you with your team like never before. <br>
+      <br>
+      You can add and view record in the calendar. <br>
+      <br>
+      Keep on top of your HR with our real-time dashboard. Timely reminders keep your todo list organised and manageable. HRSALE reminds you about: </p>
+    <br />
+    <ul >
+      <li> <strong>Holidays</strong> </li>
+      <li> <strong>Leave Requests</strong> </li>
+      <li> <strong>Travel Requests</strong> </li>
+      <li> <strong>Upcoming Birthday</strong> </li>
+      <li> <strong>Trainings</strong> </li>
+      <li> <strong>Projects</strong> </li>
+      <li> <strong>Tasks</strong> </li>
+      <li> <strong>Events</strong> </li>
+      <li> <strong>Meetings</strong> </li>
+      <li> <strong>Goals</strong> </li>
+    </ul>
+    </br>
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View HR Calendar</strong></p>
+        <img src="assets/screenshots/28_hr_calendar.png" /> </li>
+    </ul>
+  </section>
+  <section id="asset_hr">
+    <div class="page-header">
+      <h2><strong>Assets</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <section id="assets">
+    <div class="page-header">
+      <h3>Assets</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Keep a track of your organization’s assets and assign them to employees. Store and maintain comprehensive asset information and employees can raise requests to replace or repair assets which have stopped working. <br>
+      <br>
+      To view Assets go to Assets > Assets </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Asset and Asset List</strong></p>
+        <img src="assets/screenshots/29_assets_list.png" /> </li>
+    </ul>
+  </section>
+  <section id="assets_category">
+    <div class="page-header">
+      <h3>Assets Category</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can create, edit and delete assets categories <br>
+      <br>
+      To view Assets go to Assets > Category </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Asset Category and Asset Category List</strong></p>
+        <img src="assets/screenshots/30_assets_category.png" /> </li>
+    </ul>
+  </section>
+  <section id="goal_hr">
+    <div class="page-header">
+      <h2><strong>Goal Tracking</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <section id="goal">
+    <div class="page-header">
+      <h3>Goal Tracking</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can set up reminds so that you never forget to maintain those daily habits that lead to bigger goal achievement. Simply pick a goal, set a target by inputting a goal value or a certain date and then specify the action you need to do to turn it into a habit. <br>
+      <br>
+      To view Goal Tracking go to Goal Tracking > Goal Tracking </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Goal Tracking and Goal Tracking List</strong></p>
+        <img src="assets/screenshots/31_goals_list.png" /> </li>
+    </ul>
+  </section>
+  <section id="goal_type">
+    <div class="page-header">
+      <h3>Goal Type</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can create, edit and delete goal types <br>
+      <br>
+      To view Goal Type go to Goal Tracking > Goal Type </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Goal Type and Goal Type List</strong></p>
+        <img src="assets/screenshots/32_goal_type.png" /> </li>
+    </ul>
+  </section>
+  <section id="em_hr">
+    <div class="page-header">
+      <h2><strong>Events & Meetings</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <section id="events">
+    <div class="page-header">
+      <h3>Events</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Event & meetings system is a simple and advanced script. It is suitable for any one who wants to create event based functionality to their system. You can easily manage your events and meetings so they can be added, updated and deleted in an easy way. All events and meetings will be showing in a calendar with time. <br>
+      <br>
+      To view Events go to Events & Meetings > Events </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Events and Events List</strong></p>
+        <img src="assets/screenshots/30_events.png" /> </li>
+    </ul>
+  </section>
+  <section id="meetings">
+    <div class="page-header">
+      <h3>Meetings</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Event & meetings system is a simple and advanced script. It is suitable for any one who wants to create event based functionality to their system. You can easily manage your events and meetings so they can be added, updated and deleted in an easy way. All events and meetings will be showing in a calendar with time. <br>
+      <br>
+      To view Meetings go to Events & Meetings > Meetings </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Meetings and Meetings List</strong></p>
+        <img src="assets/screenshots/31_meetings.png" /> </li>
+    </ul>
+  </section>
+  <section id="ta_hr">
+    <div class="page-header">
+      <h2><strong>Time & Attendance</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <!-- Attendance Section Start -->
+  <section id="attendance">
+    <div class="page-header">
+      <h3>Attendance</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Attendance is key for any Human Resource Management system to accurately manage and maintain employees. In HRSALE - a beautiful and very effective attendance management is provided. Employees will be using Clock In and Clock Out attendance for day to day attendance activities. Employees' from their panel will get a beautiful button to Clock In and Clock Out as they require. They can provide comments and can also view their own attendance activities from their panel. <br>
+      You can also view the location of employees from where they clock-in and clock-out. <br>
+      <br>
+      To view Attendance go to Time and Attendance > Attendance </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View Attendance List</strong></p>
+        <img src="assets/screenshots/34_timesheet_attendance.png" /> </li>
+    </ul>
+  </section>
+  <!-- Attendance Section End --> 
+  
+  <!-- Date Wise Attendance Start -->
+  <section id="date_wise_attendance">
+    <div class="page-header">
+      <h3>Date Wise Attendance</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In Date Wise Attendance you can select date range for any employee, means you can view employees attendances of any date. <br>
+      for example last 1 week attendance, last month attendance etc etc. <br>
+      <br>
+      To view Date Wise Attendance go to Time and Attendance > Date Wise Attendance </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View Date Wise Attendance List</strong></p>
+        <img src="assets/screenshots/35_timesheet_datewise_attendance.png" /> </li>
+    </ul>
+  </section>
+  <!-- Date Wise Attendance End --> 
+  <section id="monthly_timesheet">
+    <div class="page-header">
+      <h3>Monthly Timesheet</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In monthly timesheet employee can check all monthly attendance, leave and holidays. <br>
+    Administrator can also check the attendance of any employee. <br>
+      <br>
+      To view Monthly Timesheet go to Timesheet > Monthly Timesheet </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View Monthly Timesheet</strong></p>
+        <img src="assets/screenshots/36_1_monthlytimesheet.png" /> </li>
+    </ul>
+  </section>
+  <section id="timesheet_calendar">
+    <div class="page-header">
+      <h3>Timesheet Calendar</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;">  In timesheet calendar employee can check all monthly attendance, leave and holidays in a calendar. <br>
+       Administrator can also check the attendance of any employee. <br>
+      <br>
+      To view Monthly Timesheet go to Timesheet > Timesheet Calendar</p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View Timesheet Calendar</strong></p>
+        <img src="assets/screenshots/36_2_monthlytimesheetcalendar.png" /> </li>
+    </ul>
+  </section>
+  <!-- Update Attendance Start -->
+  <section id="update_uttendance">
+    <div class="page-header">
+      <h3>Update Attendance</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In Update Attendance you can update attendance for employees. First select any date in calendar and then employee, you will get attendances of that employee. <br>
+      <br>
+      To view Update Attendance go to Time and Attendance > Update Attendance </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Update Attendance List</strong></p>
+        <img src="assets/screenshots/36_timesheet_update_attendance_list.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Update Attendance Form</strong></p>
+        <img src="assets/screenshots/37_timesheet_update_attendance_form.png" /> </li>
+    </ul>
+  </section>
+  <!-- Update Attendance End -->
+  <section id="import_uttendance">
+    <div class="page-header">
+      <h3>Import Attendance</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> The first line in downloaded csv file should remain as it is. Please do not change the order of columns in csv file. <br>
+      The correct column order is (Employee ID, Attendance Date, Clock In Time and Date, Clock Out Time and Date) and you must follow the csv file, otherwise you will get an error while importing the csv file. <br>
+      <br>
+      To view Import Attendance go to Time and Attendance > Import Attendance </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Import Attendance</strong></p>
+        <img src="assets/screenshots/37_timesheet_import_attendance.png" /> </li>
+    </ul>
+  </section>
+  
+  <!-- payroll Section Start -->
+  <section id="section_payroll">
+    <div class="page-header">
+      <h2>Payroll</h2>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Payroll is the most vital part of our HRSALE. A very intelligent and robust payroll management is provided so that you do not have to worry about any aspect 
+      of your payroll management. The system will trigger and do almost everything for you. The features that payroll management holds are listed below: </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Generate Payslip</strong></p>
+        <img src="assets/screenshots/47_payroll_generate_payslip.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Make Payment</strong></p>
+        <img src="assets/screenshots/48_payroll_makepayment.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Generate Payslip details and Payslip PDF</strong></p>
+        <img src="assets/screenshots/49_payroll_generate_payslip_details.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Payment History</strong></p>
+        <img src="assets/screenshots/50_payroll_payment_history.png" /> </li>
+    </ul>
+  </section>
+  <!-- payroll Section End --> 
+  <!-- Recruitment Section Start -->
+  <section id="recruitment">
+    <div class="page-header">
+      <h3>Recruitment</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Recruitment is also the most vital part of our HRSALE. Job opening Information, job functions, requirements and skills information and staffing status. The features that recruitment management holds are listed below: </p>
+    <ul>
+      <li><strong>Step-1: Job Post</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create new job according to your need and then the job will appear on frontend for all employee, then employee can apply for any job which are posted internally. Internaly means that involves considering present employees as applicants for available positions. This often occurs when a person is promoted, and it provides a strong motivation for current employees. </li>
+      <br>
+      <li><strong>Step-2: Job Candidates</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> After successful creation of new job - all employees can easily apply for that job, and then admin can view the new job applications in Job Candidates page. </li>
+      <br>
+      <li><strong>Step-3: Job Interviews</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> After receive job applications admin can now invite the candidates for interview. Admin can easily add the interview place, interview time and interview date. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Post Job and Job List</strong></p>
+        <img src="assets/screenshots/51_recruitment_job_post_list.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Job Candidates List</strong></p>
+        <img src="assets/screenshots/52_recruitment_job_candidates.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Add Interview and Interview List</strong></p>
+        <img src="assets/screenshots/53_recruitment_job_interviews.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>List all Jobs on Frontend</strong></p>
+        <img src="assets/screenshots/54_recruitment_list_all_jobs.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Job Details page on Frontend</strong></p>
+        <img src="assets/screenshots/55_recruitment_job_details_page.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Apply Job Form</strong></p>
+        <img src="assets/screenshots/56_recruitment_apply_job_form.png" /> </li>
+    </ul>
+  </section>
+  <section id="theme_settings">
+    <div class="page-header">
+      <h3>Theme Settings</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In theme customization you can do the following below tasks:
+    <ol>
+      <li><strong>Page Layouts</strong>
+        <ul>
+          <li><strong>Page Headers</strong>: Set breadcrumbs for pages.</li>
+          <li><strong>Footer Layout</strong>: Set footer layout.</li>
+          <li><strong>Total statistics cards on dashboard</strong>: Set total no. of statistics cards for admin dashboard.</li>
+          <li><strong>Statistics Cards Background</strong>: Set background color for statistics cards for admin dashboard.</li>
+          <li><strong>Employee Cards</strong>: Set employee cards for employee directory page.</li>
+          <li><strong>Employee Cards Border Color</strong>: Set employee cards border color. 
+            Note: This will work for Simple Employee Cards with Border option only.</li>
+          <li><strong>Boxed layout</strong>: The boxed layout has a padding around the main wrapper as well as a background can be applied to it and all your content will be centered with the background flowing around it.</li>
+        </ul>
+      </li>
+      <li><strong>Navigation Menu</strong>:
+        <ul>
+          <li><strong>Compact Menu</strong>: Default vertical menu is full width. You may want change that behavior and make the menu compact at page level or at template level. You can experience compact menu in left side menu.</li>
+          <li><strong>Flipped Menu</strong>: Change navigation menu position to right with the help of flipped navigation menu options. RTL layout has default flipped navigation menu.</li>
+          <li><strong>Right side icons</strong>: Default position of top level menu items icon position is left, it can be changed to right side with the help of navigation right side icon options. Check navigation with right side icons in navigation menu.</li>
+          <li><strong>Bordered</strong>: Bordered navigation separate first level of main navigation by adding border. You can check bordered navigation on left side navigation menu.</li>
+        </ul>
+      </li>
+      <li><strong>Color System</strong>:
+        <ul>
+          <li>Set color for top bar and left menu.</li>
+        </ul>
+      </li>
+      <li><strong>Notification Position</strong>: 
+        Set position for notifications, and enable/disable close button and progress bar for notifications. </li>
+      <li><strong>Form Design</strong>: 
+        Set form input design in the system. </li>
+      <li><strong>System Logos</strong>: 
+        Set system logo, signin page logo, recruitment page logo and payroll logo.
+        Note: When you set the signin page logo, then it will also show for forgot password page and lock user page. </li>
+      <li><strong>Organization Chart</strong>: 
+        An organizational chart is a diagram that shows the structure of an organization and the relationships and relative ranks of its parts and positions/jobs.
+        <ul>
+          <li><strong>Chart Layout</strong>: Set Organization Chart Layout.</li>
+          <li><strong>Export file title</strong>: Set export file title - you can also add your company name here.</li>
+          <li><strong>Export Chart</strong>: Enable the export button for orgchart. Export Chart will be an image.</li>
+          <li><strong>Zoom Chart</strong>: Users could zoomin/zoomout the orgchart by mouse wheel if they enable this option.</li>
+          <li><strong>Pan Chart</strong>: Users could pan the orgchart by mouse drag&amp;drop if they enable this option.</li>
+        </ul>
+      </li>
+    </ol>
+    </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>View Theme Settings</strong></p>
+        <img src="assets/screenshots/56_theme_settings.png" /> </li>
+    </ul>
+  </section>
+  <!-- Recruitment Section End -->
+  <section id="training_hr">
+    <div class="page-header">
+      <h2><strong>Training</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <!-- Training Section Start -->
+  <section id="training">
+    <div class="page-header">
+      <h3>Training</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Training is a common aspect of all organization. Therefore to track and update training and related operations - HRSALE facilitates with Training Modules. 
+      You can create training and assign your employees for training and then peform the following tasks: </p>
+    <ul>
+      <li><strong>Set Training Details</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Set training name, description of the training and the vendor name. Specify training start and end dates. You can also specify the cost of the training. </li>
+      <li><strong>Training Status</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can set training status - whether the training has started, pending, completed or terminated - thus afterwards when you track back to that training 
+        you can easily understand the state / status of the training. </li>
+      <li><strong>Performance</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Afterwards when you update the training OR when employee has completed the training - you can update performance of the training. You can set whether the employee 
+        did good, satisfactory, excellent, poor or not concluded from the performance drop down option. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Training and Traiing List</strong></p>
+        <img src="assets/screenshots/57_training_list.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Training Details and Status</strong></p>
+        <img src="assets/screenshots/58_training_details_status.png" /> </li>
+    </ul>
+  </section>
+  <!-- Training Section End --> 
+  <!-- Training Type Section Start -->
+  <section id="training_type">
+    <div class="page-header">
+      <h3>Training Type</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can add training type in Training Type page, and also edit/delete the training type. For training type just add the title and hit the button. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Training Type and Training Type List</strong></p>
+        <img src="assets/screenshots/59_training_type.png" /> </li>
+    </ul>
+  </section>
+  <!-- Training Type Section End --> 
+  
+  <!-- Trainers Section Start -->
+  <section id="trainers">
+    <div class="page-header">
+      <h3>Trainers</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Trainers is also a common aspect of Human Resource Management System. Therefore to track and update trainers and related operations - HRSALE facilitates with Trainers Modules. 
+      You can create trainers and assign to designations and then peform the following tasks: </p>
+    <ul>
+      <li><strong>Set Trainer Details</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Set trainer first name and last name, contact number, email, trainer address and expertise of the trainer. Assign trainer to specific designations. Afterwards you can update the trainers info or delete the specific trainer. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Trainer and Trainer List</strong></p>
+        <img src="assets/screenshots/60_training_trainers.png" /> </li>
+    </ul>
+  </section>
+  <!-- Trainers Section End --> 
+  <!--Files Manager Section Start -->
+  <section id="files_manager">
+    <div class="page-header">
+      <h3>Files Manager</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;">
+        In files manager, you can upload any type of file in different departments, employees can view their own departments files or can upload files only own department.<br>
+        <br>
+        <strong style="color: red">Note:</strong> Adminitrator can set access for files manager, that employee can view other departments files too, and also administrator can set files extension in the files manager settings which is under Settings module under Files Manager tab. 
+    </p>
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Files Manager</strong></p>
+        <img src="assets/screenshots/101_files_manager.png" /> </li>
+    </ul>
+  </section>
+  <!-- Files Manager Section End --> 
+  <!-- Tickets Section Start -->
+  <section id="inquires">
+    <div class="page-header">
+      <h3>Inquires</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Creating a new inquiry in the system is also very easy. You can at a go - add all related information of a inquiry. The facilities that inquiry management holds in HRSALE are listed below:<br>
+    </p>
+    <h4>Administrator</h4>
+    <ul>
+      <li><strong>Create New Inquiry</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily create new Inquiry in the system for any employee. The form is elaborate with all possible information you might need to add for a new Inquiry. </li>
+      <li><strong>Inquiry List</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can see list of all inquiries at a glance. </li>
+    </ul>
+    <br />
+    <h4>Employee</h4>
+    <ul>
+      <li><strong>Create New Inquiry</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Employee can also create a new Inquiry in the system. After that admin will receive inquiry notification. </li>
+      <li><strong>Inquiry List</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Employee can see list of all inquiries at a glance. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Create Inquiry and Inquiry List</strong></p>
+        <img src="assets/screenshots/22_employee_tickets.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Inquiry Details</strong></p>
+        <img src="assets/screenshots/23_employeee_ticket_details.png" /> </li>
+    </ul>
+  </section>
+  <!-- Tickets Section End -->
+  <section id="performance_hr">
+    <div class="page-header">
+      <h2><strong>Performance</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <!-- Performance Indicator Section Start -->
+  <section id="performance_indicator">
+    <div class="page-header">
+      <h3>Performance Indicator</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In performance indicator you can set new performance for designations in the company. You can set Technical Competencies and Technical Competencies in performance indicator for any designation.<br>
+      <br>
+      To view Performance Indicator go to Performance > Performance Indicator </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Set Performance Indicator and Performance Indicator List</strong></p>
+        <img src="assets/screenshots/28_employee_performance_indicator.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>View Performance Indicator</strong></p>
+        <img src="assets/screenshots/29_employee_performance_indicator_view.png" /> </li>
+    </ul>
+  </section>
+  <!-- Performance Indicator Section End --> 
+  <!-- Performance Appraisals Section Start -->
+  <section id="performance_appraisal">
+    <div class="page-header">
+      <h3>Performance Appraisals</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can set performance appraisals for any employee of any month. Also you can view / edit and delete appraisals from Performance Appraisal List. <br>
+      <br>
+      To view Performance Appraisals go to Performance > Performance Appraisals </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Give Performance Appraisal</strong></p>
+        <img src="assets/screenshots/30_employee_performance_appraisal.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>View Performance Appraisal</strong></p>
+        <img src="assets/screenshots/31_employee_performance_appraisal_view.png" /> </li>
+    </ul>
+  </section>
+  <!-- Performance Indicator Section End -->
+  <section id="project_hr">
+    <div class="page-header">
+      <h2><strong>Projects</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <!-- Settings Section End -->
+  <section id="projects">
+    <div class="page-header">
+      <h3>Projects</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Projects Management is an important feature every company needs to accomplish various projects. Projects has been provided in HRSALE to facilitate admins and employees to create, track, and discuss in between various projects. <br>
+      <br>
+      You can assign one project to many employees at a time, and can define start and end date of the project. <br>
+      <br>
+      To view projects go to Projects > Projects </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Project and Project List</strong></p>
+        <img src="assets/screenshots/10_org_project.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Project Details</strong></p>
+        <img src="assets/screenshots/10_org_project_details.png" /> </li>
+    </ul>
+  </section>
+  <!-- Task Section Start -->
+  <section id="worksheet_tasks">
+    <div class="page-header">
+      <h3>Tasks</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Task Management is an important feature every company needs to accomplish various task. Task has been provided in HRSALE to facilitate admins
+      and employees to create, track, and discuss in between various tasks. The various features the task management provides are listed below: <br>
+      <br>
+      To view Tasks go to Projects > Tasks </p>
+    <ul>
+      <li><strong>Create Task</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Create a new task from the Add Task form. Creating a new task is very easy. </li>
+      <li><strong>Task Description</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Provide Task Description as you require. A beautiful editor is provided so that you can use text formating. </li>
+      <li><strong>Assign Multiple Employees</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can select multiple employees form the dropdown list and can assign a task to multiple employees if required.
+        Every employee will be notified by email and also in their own employee panel. </li>
+      <li><strong>Start & End Date</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Set start and end date for any task - you can easily track start and end dates from beautiful task reports. </li>
+      <li><strong>Set Estimated Hour</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily define estimated hours required to complete this task as you see fit. Employees will see the estimated hours and will comply accordingly. </li>
+      <li><strong>Set Status & Progress</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can set task progress accordingly by using a user friendly drag progress bar. Also you can set specified task status from the dropdown provided.
+        Only admins will be able to set task status and progress after observing task completion in real life. </li>
+      <li><strong>Task Comments</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Once you create a task - you can go to task details - from which both Admin and Employees will be able to provide comments 
+        against a specific task. This feature is very helpful by which employees and admins can communicate with each other and discuss about anything needed. </li>
+      <li><strong>Task Attachment</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Once you create a task - you can go to task details and see all atachment OR can also add new attachment if required. You can find who attached what documents
+        and can also view attachments. You can add images, pdf or any other type of attachment for a task. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Task and Task List</strong></p>
+        <img src="assets/screenshots/40_timesheet_tasks.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Task Details and Status</strong></p>
+        <img src="assets/screenshots/41_timesheet_task_details_status.png" /> </li>
+    </ul>
+  </section>
+  <!-- Task Section End --> 
+  <!-- Leave Section Start -->
+  <section id="leave">
+    <div class="page-header">
+      <h3>Leave</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> Leave is one of the key aspects of any human resource management software - therefore an easy and user friendly application handling facility is provided. Human Resource provides the following features: </p>
+    <ul>
+      <li><strong>Leave Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Admin from general settings can create leave type - which will be the key for every employees to apply for any  leave application under those categroies. </li>
+      <li><strong>Leave Quota</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> When you create leave type - you can set leave application quota for each individual leave type - whenever an employee applies for any leave application under any category - if that leave application is approved - the quota count will increase and you can easily at a glance figure out how any applications have been approved under what quota. </li>
+      <li><strong>Leave Details</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily view full detail of any leave application - and can accept / reject leave applications - and if necessary also provide comments for your action. The comment provided by you will be shown to the employee. If you have multiple admins working in the system - if any admin approves an application - you can see which admin approved 
+        this application from the application detail tab. Every detail about the application is shown in the leave application detail tab. </li>
+      <li><strong>Leave Notification</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> Whenever a new leave application is applied - you will be notified about the leave application in the notification center and also you will mail about new leave application - also the latest leave application applied will sort out to the top 
+        in the notification center in header. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Add Leave and Leave List</strong></p>
+        <img src="assets/screenshots/38_timesheet_leave_list_add.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Leave Details</strong></p>
+        <img src="assets/screenshots/39_timesheet_leave_details.png" /> </li>
+    </ul>
+  </section>
+  <!-- Leave Section End -->
+  <section id="system_hr">
+    <div class="page-header">
+      <h2><strong>System</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <!-- Settings Section Start -->
+  <section id="multi_language">
+    <div class="page-header">
+      <h3>Multi Language</h3>
+      <hr class="notop">
+    </div>
+    <hr>
+    <p style="text-align: justify;; width: 900px;"> To add a language go to languages/ from top menu. When you add any language then go to application/language/ folder and open your desired language folder and then change the text into other desired language.<br/>
+      <br/>
+      You can also set the default language in the system, go to application/config/config.php, find $config['language'] and set your desired language. <br>
+      <br>
+      URL should be like this www.example.com/dashboard/set_language/english, in URL english is the language folder, you can set your own desired language path here. <br>
+      <br>
+      If any help needed you may contact us at hrsalesoft@gmail.com, we will reply you as soon as possible. <br>
+      <strong style="color: red">Note:</strong> When you delete any language then selected language folder will also be deleted. If you want to use that folder in future then first make a copy of that folder. <br>
+      <br>
+      <br>
+      <img src="assets/screenshots/4_multi_language.png" /><br>
+    </p>
+  </section>
+  <section id="setup_modules">
+    <div class="page-header">
+      <h3>Setp Modules</h3>
+      <hr class="notop">
+    </div>
+    <hr>
+    <p style="text-align: justify;; width: 900px;"> In order to make HRSALE user interface much simpler to use for you and your employees you can select the purpose of using this application for your company. This will disable unwanted modules and provide you a better user experience. <br>
+      <br>
+      URL should be like this www.example.com/dashboard/set_language/english, in URL english is the language folder, you can set your own desired language path here.
+    <ul>
+      <li><strong>Recruitment</strong>: Recruitment is the most vital part of HRSALE. Job opening Information, job functions, requirements and skills information and staffing status.</li>
+      <li><strong>Files Manager</strong>: A good solution for managing files and folders for developers who can't access their site over SSH or FTP. Access your files anywhere through self-hosted secure storage, file backup and sharing for your photos, videos, files and more. Upload and download large files for easy sharing.</li>
+      <li><strong>Training</strong>: Training is a common aspect of all organization. Therefore to track and update training and related operations - HRSALE facilitates with Training Modules. You can create training and assign your employees for training.</li>
+      <li><strong>Travels</strong>: You can easily add new Travel in the system. The form is elaborate with all possible information you might need to add for a new Travel.</li>
+      <li><strong>Multi Language</strong>: To add a language go to languages/ from top menu. When you add any language then go to application/language/ folder and open your desired language folder and then change the text into other desired language.</li>
+      <li><strong>Inquires</strong>: Creating a new inquiry in the system is also very easy. You can at a go - add all related information of a inquiry.</li>
+      <li><strong>Performance</strong>: You can set new performance for designations and employees in the company.</li>
+      <li><strong>Organization Chart</strong>: An organizational chart is a diagram that shows the structure of an organization and the relationships and relative ranks of its parts and positions/jobs.</li>
+      <li><strong>Awards</strong>: You can give your employees different awards in different times as you organization see fit. Giving an employee award is very easy.</li>
+      <li><strong>Accounting</strong>: Accounting is the process of systematically recording, measuring, and communicating information about financial transactions.</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <img src="assets/screenshots/4_setup_modules.png" /><br>
+    </p>
+  </section>
+  <section id="settings">
+    <div class="page-header">
+      <h3>Settings</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In settings you can do the following below tasks: </p>
+    <ul>
+      <li><strong>General Configuration</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> The tab settings is for to setup basic business information you possess. In settings you
+        can set your company name, company email, company address and contact details. This information will be showing in payroll pdf file. </li>
+      <li><strong>System Configuration</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> In this tab you can setup application name, set date format, and set currency, if you set date format and set currency in this tab then it will show globally every where in the system. </li>
+      <li><strong>Role Configuration</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> In this tab you can set role for employees, like employee can manage his/her own contact information, bank accounts, qualifications, work experiences and own documents. </li>
+      <li><strong>Payroll</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> In payroll configuration, you can set password for payslip, and can choose password option from dropdown, which is payslip password format. </li>
+      <li><strong>Applicant Tracking</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> In job configuration, you can enable/disable jobs for employees, for example if you disable the jobs, then employee won't see the jobs on frontend, and can't apply for any job.<br>
+        Job application file format, you can set file format for applications, like employee can upload pdf file, doc file, docx file while applying for a job. </li>
+      <li><strong>Email Notifications</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can easily enable/disable the email notifications. </li>
+      <li><strong>Files Manager</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can set files extension, max file size and enable/disble the departments files for all employees. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>General Configuration</strong></p>
+        <img src="assets/screenshots/62_settings_general.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Payroll</strong></p>
+        <img src="assets/screenshots/66_settings_payroll.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>System Configuration</strong></p>
+        <img src="assets/screenshots/64_settings_system_configuration.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Role Configuration</strong></p>
+        <img src="assets/screenshots/65_settings_role.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Email Configuration</strong></p>
+        <img src="assets/screenshots/63_settings_email.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Job Configuration</strong></p>
+        <img src="assets/screenshots/67_settings_job.png" /> </li>
+     <li style="list-style: none;">
+        <p><strong>Files Manager</strong></p>
+        <img src="assets/screenshots/101_files_manager_config.png" /> </li>   
+    </ul>
+  </section>
+  
+  <!-- Constants Section Start -->
+  <section id="constants">
+    <div class="page-header">
+      <h3>Constants</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In Constants you can add all types, like leave type, document type, warning type etc etc, so you can do the following below tasks: </p>
+    <ul>
+      <li><strong>Contract Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Contract Type, delete and edit. </li>
+      <li><strong>Education Level</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Education Level, delete and edit. </li>
+      <li><strong>Document Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Document Type, delete and edit. </li>
+      <li><strong>Award Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Award Type, delete and edit. </li>
+      <li><strong>Leave Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Leave Type, delete and edit. And during creation of leave type - you can specify no of days that leave type is permitted. </li>
+      <li><strong>Warning Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Warning Type, delete and edit. </li>
+      <li><strong>Termination Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Termination Type, delete and edit. </li>
+      <li><strong>Currency Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can add Currency, delete and edit. </li>
+      <li><strong>Expense Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Expense Type, delete and edit. </li>
+      <li><strong>Job Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Job Type, delete and edit. </li>
+      <li><strong>Employee Exit Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Employee Exit Type, delete and edit. </li>
+      <li><strong>Travel Arrangement Type</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Travel Arrangement Type, delete and edit. </li>
+      <li><strong>Payment Method</strong></li>
+      <li style="list-style: none; text-align: justify; width: 500px;"> You can create Payment Method, delete and edit. </li>
+    </ul>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>All Constants</strong></p>
+        <img src="assets/screenshots/68_constants.png" /> </li>
+    </ul>
+  </section>
+  <!-- Constants Section End --> 
+  
+  <!-- Email Template Section Start -->
+  <section id="email_template">
+    <div class="page-header">
+      <h3>Email Template</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can easily update any email template in the email template section. <br>
+      You can update the template name, subject and can update the message for specific template. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Email Template</strong></p>
+        <img src="assets/screenshots/69_email_templates.png" /> </li>
+      <li style="list-style: none;">
+        <p><strong>Update Email Template</strong></p>
+        <img src="assets/screenshots/70_email_template_update.png" /> </li>
+    </ul>
+  </section>
+  <!-- Email Template Section End --> 
+  <!-- Database Section Start -->
+  <section id="database_backup">
+    <div class="page-header">
+      <h3>Database Backup</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> You can easily take backup of your database by simply clicking on the Create Backup button on Database Backup Log management page. Everything in your database will get in the database that will be exported as a zip file. So you can download it from Database Backup Log management. Also you can delete the old backup files and can generate new back up file. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Database Backup</strong></p>
+        <img src="assets/screenshots/71_database_backup.png" /> </li>
+    </ul>
+  </section>
+  <!-- Database Section End -->
+  
+  <section id="report_hr">
+    <div class="page-header">
+      <h2><strong>HR Reports</strong></h2>
+      <hr class="notop">
+    </div>
+  </section>
+  <section id="report_payslip">
+    <div class="page-header">
+      <h3>Payslip Report</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In payslip report you can filter all employee payslip reports. Or you can filter individual employee payslip report choosing month and year. After filter you can download the report via csv, excel, pdf or you can print the report. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Payslip Report</strong></p>
+        <img src="assets/screenshots/102_report_payslip.png" /> </li>
+    </ul>
+  </section>
+  <section id="report_attendance">
+    <div class="page-header">
+      <h3>Attendance Report</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In attendance report you can filter all Projects attendance reports. Or you can filter individual employee attendance report choosing start date and end date. After filter you can download the report via csv, excel, pdf or you can print the report. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Attendance Report</strong></p>
+        <img src="assets/screenshots/102_report_attendance.png" /> </li>
+    </ul>
+  </section>
+  <section id="report_training">
+    <div class="page-header">
+      <h3>Training Report</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In Training report you can filter all Projects Training reports. Or you can filter individual employee Training report choosing start date and end date. After filter you can download the report via csv, excel, pdf or you can print the report. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Training Report</strong></p>
+        <img src="assets/screenshots/103_report_training.png" /> </li>
+    </ul>
+  </section>
+  <section id="report_projects">
+    <div class="page-header">
+      <h3>Projects Report</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In Projects report you can filter all Projects reports. Or you can filter individual Project report choosing project status. After filter you can download the report via csv, excel, pdf or you can print the report. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Projects Report</strong></p>
+        <img src="assets/screenshots/104_report_projects.png" /> </li>
+    </ul>
+  </section>
+  <section id="report_tasks">
+    <div class="page-header">
+      <h3>Tasks Report</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> In Tasks report you can filter all Tasks reports. Or you can filter individual Task report choosing Task status. After filter you can download the report via csv, excel, pdf or you can print the report. </p>
+    <br />
+    <ul class="enlarge">
+      <li style="list-style: none;">
+        <p><strong>Tasks Report</strong></p>
+        <img src="assets/screenshots/105_report_tasks.png" /> </li>
+    </ul>
+  </section>
+  <!-- Support Section Start -->
+  <section id="customer_support">
+    <div class="page-header">
+      <h3>Customer Support</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"><strong>All the support related issue should be emailed directly to hrsalesoft@gmail.com.</strong> <br />
+      <br />
+      Support is available from 9:00 AM - 6:00 PM (GMT+3), Monday - Saturday.<br />
+      <br />
+      If you are having any difficulty in understanding the product or you have any question, We encourage you to contact us. Email us at hrsalesoft@gmail.com for fast response. We will be glad to help you. </p>
+  </section>
+  <!-- Support Section End --> 
+  <!-- Customization Section Start -->
+  <section id="product_customization">
+    <div class="page-header">
+      <h3>Product Customization</h3>
+      <hr class="notop">
+    </div>
+    <p style="text-align: justify;; width: 900px;"> <strong>HRSALE can be customize depending on your need. Our charges are affordable.</strong> <br />
+      <br />
+      We work and charge for customization as $25/hour.<br />
+      <br />
+      A fixed price quote can be generated if you provide all the details of customization. </p>
+  </section>
+  <!-- Customization Section End --> 
+</div>
+</body>
+</html>
